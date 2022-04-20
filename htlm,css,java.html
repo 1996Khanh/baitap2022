@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .tong{
+            font-family: Arial, Verdana, sans-serif;
+            background: #0088dd;
+        }
+        .header{
+            width: 600px;
+            height: 100px;
+            text-align: center;
+            background-color: #cc3333;
+            margin: 0px auto;
+        }
+        .giua{
+            width: 600px;
+            height: 400px;
+            text-align: center;
+            margin: 0px auto;
+        }
+        .left{
+            width: 40%;
+            height: 400px;
+            /*background-color: #ee3e80;*/
+            background-image: linear-gradient(180deg,red,pink);
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        .content{
+            width: 60%;
+            height: 400px;
+            background-color: #e7642c;
+            text-align: center;
+            float: left;
+        }
+        .c{
+            width: 50%;
+            height: 100%;
+            background-color: #ffffff;
+            position: absolute;
+            top: 0;
+        }
+        .p{
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 60px;
+
+        }
+        img{
+            width: 200px;
+            height: 100px;
+            padding-top: 50px;
+        }
+        .footer{
+            clear: both;
+            width: 600px;
+            height: 30px;
+            margin: auto;
+            text-align: center;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tong">
+        <div class="header">
+            <h1>XIN CHÀO</h1>
+        </div>
+        <div class="giua">
+            <div class="left">
+                <p class="p">phần bên trái</p>
+                <div class="c"></div>
+            </div>
+            <div class="content">
+                <img src="https://elead.com.vn/wp-content/uploads/2020/04/anh-dep-hoa-huong-duong-va-mat-troi_022805970-1-1181x800-6.jpg"/>
+                <p>Phan giua</p>
+                <h2>Hóa Đơn Thanh Toán</h2>
+                <p>Tiền thanh toán : <span id="total">Truoc thue</span></p>
+                <p>Tiền thuế giá trị gia tăng : <span id="subTotal">Tien thue</span></p>
+                <p>Tổng tiền thanh toán : <span id="sum">Tong tien</span></p>
+            </div>
+        </div>
+
+            <div class="footer">KẾT THÚC</div>
+    </div>
+    <script>
+        var Name = 'Qua Tao';
+        var Total;
+        var subTotal;
+        var sum;
+        var Price = 10;
+        var Quantity = 20;
+
+        Total = Price * Quantity;
+        subTotal = Total * 0.1;
+        sum = Total + subTotal;
+
+        var elTotal = document.getElementById('total');
+        elTotal.textContent = "$" + Total;
+        var elSub = document.getElementById('subTotal');
+        elSub.textContent = "$" + subTotal;
+        var elSum = document.getElementById('sum')
+        elSum.textContent = '$' + sum;
+    </script>
+
+</body>
+</html>
